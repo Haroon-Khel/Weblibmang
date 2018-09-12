@@ -1,0 +1,27 @@
+<html>
+<title>Home</title>
+	<div id="LibrarianLogin">
+		<form action="Login" method="post">
+		<br>Librarian Login<br>
+		<input name="User" type="text" value="Username" onblur="if(this.value=='') this.value='Username';" onfocus="if(this.value=='Username') this.value='';"><br><br>
+		<input name="Password" type="text" value="Password" onblur="if(this.value=='') this.value='Password';" onfocus="if(this.value=='Password') this.value='';"><br><br>
+		<input name="acc" type="hidden" value="lib">
+		<input type="submit" value="Login">
+		</form>
+	</div>
+	<br>
+	<br>
+	<br>
+	<div id="AdminLogin">
+		<form action="Login" method="post">
+		<br>Administrator Login<br>
+		<input name="User" type="text" value="Username" onblur="if(this.value=='') this.value='Username';" onfocus="if(this.value=='Username') this.value='';"><br><br>
+		<input name="Password" type="text" value="Password" onblur="if(this.value=='') this.value='Password';" onfocus="if(this.value=='Password') this.value='';"><br><br>
+		<input name="acc" type="hidden" value="admin">
+		<input type="submit" value="Login">
+		</form>
+	</div>
+	
+	
+
+</html>

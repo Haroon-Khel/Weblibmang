@@ -1,0 +1,6 @@
+To Do:
+
+A class that takes in the request parameters: User, Password and Acc.
+Searches mongodb for an entry in the Users collection for a document verifying all 3 conditions
+	simultaneously. Else a null is returned and user is redirected back to home page, with text
+	under fields reading something along the lines of "invalid user/pass" 
