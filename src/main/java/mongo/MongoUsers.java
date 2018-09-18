@@ -14,6 +14,7 @@ public class MongoUsers {
 	private MongoOperations op;
 	private ApplicationContext context;
 	
+	//Constructor for lookup of single user
 	public MongoUsers(String username, String password, String account) {
 		
 		this.username = username;
@@ -85,3 +86,7 @@ public class MongoUsers {
 	
 
 }
+
+/* 
+ * Will likely have multiple constructors to accommodate for various jobs
+*/

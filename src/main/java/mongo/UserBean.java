@@ -48,7 +48,4 @@ public class UserBean {
 		return String.format("{\"_id\": \"%s\", \"username\": \"%s\", \"password\": \"%s\", \"account\": \"%s\"}",
 				id, getUsername(), getPassword(), getAccount());
 	}
-	
-	
-
 }

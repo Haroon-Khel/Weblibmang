@@ -16,9 +16,7 @@ public class LoginServlet extends HttpServlet {
 	       throws ServletException, IOException {
 		 
 		System.out.println("get");
-		System.out.println(req.getParameter("User"));
-		System.out.println(req.getParameter("Password"));
-		System.out.println(req.getParameter("acc"));
+		req.getRequestDispatcher("home.html").forward(req, resp);
 	}
 	 
 	 protected void doPost(HttpServletRequest req, HttpServletResponse resp)
@@ -33,6 +31,11 @@ public class LoginServlet extends HttpServlet {
 		 
 		 if (isThere) {
 			 resp.getWriter().write("Come on through.");
+			 if (account.equals("admin")) {
+				 req.getRequestDispatcher("admin.html").forward(req, resp);
+			 } else {
+				 req.getRequestDispatcher("lib.html").forward(req, resp);
+			 }
 		 }
 		 else {
 			 resp.getWriter().write("No such user.");			 
