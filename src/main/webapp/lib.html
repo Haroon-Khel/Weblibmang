@@ -1,6 +1,36 @@
 <html>
 
-<h1>Librarian</h1>
+	<h1>Librarian</h1>
+	
+	<div id="AddBook">
+		<form action="LibrarianRequests" method="post">
+			<input name="name" type="text" value="Name" onblur="if(this.value=='') this.value='Name';" onfocus="if(this.value=='Name') this.value='';"><br><br>
+			<input name="author" type="text" value="Author" onblur="if(this.value=='') this.value='Author';" onfocus="if(this.value=='Author') this.value='';"><br><br>
+			<input name="genre" type = "text" value = "Genre" onblur="if(this.value=='') this.value='Genre';" onfocus="if(this.value=='Genre') this.value='';"><br><br>
+			<input type="submit" value="Add Book"> 
+		</form>
+	</div>
+	<br><br>
+	<div id="Ajax">
+		<button type="button" onclick="ajaxReq()">Ajax Request</button> 
+	</div>
+	
+	<script>
+		function ajaxReq() {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					document.getElementById("response").innerHTML = this.responseText;
+				}
+			}
+			xhttp.open("GET", "LibrarianRequests", true);
+			xhttp.send();
+		}
+	</script>
+	
+	<p id="response"></p>
+	
+
 
 </html>
 

@@ -15,5 +15,14 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns
 		<servlet-name>Login</servlet-name>
 		<url-pattern>/Login</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>LibrarianServlet</servlet-name>
+		<servlet-class>servlet.LibrarianRequests</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LibrarianServlet</servlet-name>
+		<url-pattern>/LibrarianRequests</url-pattern>
+	</servlet-mapping>
 
 </web-app>
